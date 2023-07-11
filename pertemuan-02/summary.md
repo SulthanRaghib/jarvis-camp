@@ -14,16 +14,16 @@ dalam file `3_tipe_data.php` saya belajar tentang tipe data di php ada tipe data
 
 ## 4. Function PHP
 
-dalam pembelajaran function dengan menggunakan `echo` untuk menampilkan output dari penjumlahan tidak terjadi error, tetapi dalam kasus saya menggunakan `echo` error
+dalam pembelajaran function dengan menggunakan `echo` untuk menampilkan output dari penjumlahan tidak terjadi error, tetapi dalam kasus saya menggunakan `echo` error, hasil dari perkalian hasilnya 0
 
 <p align="center">
-<img src="img/dengan-echo.png" width="100%">
-<img src="img/hasil-dengan-echo.png" width="100%">
+<img src="img/dengan-echo.png" width="500">
+<img src="img/hasil-dengan-echo.png" width="500">
 </p>
 
 apabila menggunakan `return` tidak terjadi error, yang error hanya pada saat menampilkan output dari penjumlahan
 
 <p align="center">
-<img src="img/dengan-return.png" width="100%">
-<img src="img/hasil-dengan-return.png" width="100%">
+<img src="img/dengan-return.png" width="500">
+<img src="img/hasil-dengan-return.png" width="500">
 </p>
