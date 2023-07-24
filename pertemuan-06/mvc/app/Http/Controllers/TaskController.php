@@ -17,4 +17,14 @@ class TaskController extends Controller
             'tugas' => $tasks,
         ]);
     }
+
+    public function show($id)
+    {
+        // mengambil data task berdasarkan id
+        $task = Task::findById($id);
+        // mengirimkan data task ke view
+        return view('task.show', [
+            'tugas' => $task,
+        ]);
+    }
 }

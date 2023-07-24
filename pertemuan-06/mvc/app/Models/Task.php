@@ -38,4 +38,16 @@ class Task extends Model
     {
         return self::$tasks;
     }
+
+    public static function findById($id)
+    {
+        // looping data tasks
+        foreach (self::$tasks as $task) {
+            // cek jika id yang dicari sama dengan id yang ada di data
+            if ($task['id'] == $id) {
+                return $task;
+            }
+        }
+        return null;
+    }
 }

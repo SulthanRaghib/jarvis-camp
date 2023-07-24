@@ -19,4 +19,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route untuk menampilkan semua task
-Route::get('/', [TaskController::class, 'index']);
+Route::get('/', [TaskController::class, 'index'])->name('task.index');
+// Route untuk menampilkan detail task.show
+Route::get('/task/{id}', [TaskController::class, 'show'])->name('task.show');

@@ -16,32 +16,34 @@
 <body class="container-fluid">
     <h1 class="mt-4 text-center">Task Management</h1>
     <hr>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Task</th>
-                <th>Deadline</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($tugas as $task)
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $task['name'] }}</td>
-                    <td>{{ \Carbon\Carbon::parse($task['deadline'])->format('d F Y') }}</td>
-                    <td>{{ $task['status'] }}</td>
-                    <td>
-                        <a href="#" class="btn btn-primary btn-sm">View</a>
-                        <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                    </td>
+                    <th>No</th>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th>Action</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($tugas as $task)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $task['name'] }}</td>
+                        <td>{{ \Carbon\Carbon::parse($task['deadline'])->format('d F Y') }}</td>
+                        <td>{{ $task['status'] }}</td>
+                        <td>
+                            <a href="{{ route('task.show', $task['id']) }}" class="btn btn-primary btn-sm">View</a>
+                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 
     {{-- JS CDN Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
