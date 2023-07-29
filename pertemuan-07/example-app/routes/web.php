@@ -14,5 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $data = [
+        'title' => 'Dashboard',
+        'user' => [
+            'name' => 'Raghib',
+            'email' => 'raghib@gmail.com',
+            'pesan' => '<h1>Teruslah menyerah dan teruslah putus asa!</h1>'
+        ]
+    ];
+
+    return view('contents.dashboard', $data);
+})->name('dashboard');
+
+Route::get('users', function () {
+    $data = [
+        'title' => 'Users'
+    ];
+
+    return view('contents.users', $data);
+})->name('users');
