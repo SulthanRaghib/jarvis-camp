@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,39 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $data = [
-        'title' => 'Dashboard',
-        'user' => [
-            'name' => 'Raghib',
-            'email' => 'raghib@gmail.com',
-        ]
-    ];
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/pages/blank-pages', [DashboardController::class, 'pageBlank'])->name('blank-pages');
 
-    return view('contents.dashboard', $data);
-})->name('dashboard');
-
-Route::get('/users', function () {
-    $data = [
-        'title' => 'Users',
-        'user' => [
-            'name' => 'Raghib',
-            'email' => 'raghib@gmail.com',
-        ]
-    ];
-
-    return view('contents.users', $data);
-})->name('users');
-
-
-Route::get('/pages/blank-pages', function () {
-    $data = [
-        'title' => 'Blank Page',
-        'user' => [
-            'name' => 'Raghib',
-            'email' => 'raghib@gmail.com',
-        ]
-    ];
-
-    return view('contents.pages.blank', $data);
-})->name('blank-pages');
+Route::get('/users', [UserController::class, 'index'])->name('users');
+Route::get('/events', [EventController::class, 'index'])->name('events');

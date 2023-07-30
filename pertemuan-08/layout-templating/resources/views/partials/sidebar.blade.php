@@ -26,6 +26,13 @@
              <span>Users</span></a>
      </li>
 
+     <!-- Nav Item - Events -->
+     <li class="nav-item {{ Request::is('events') ? 'active' : '' }}">
+         <a class="nav-link" href={{ route('events') }}>
+             <i class="fas fa-fw fa-calendar"></i>
+             <span>Events</span></a>
+     </li>
+
      <!-- Nav Item - Tables -->
      <li class="nav-item {{ Request::is('table') ? 'active' : '' }}">
          <a class="nav-link" href="#">
