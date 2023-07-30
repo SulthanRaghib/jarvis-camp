@@ -14,5 +14,38 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $data = [
+        'title' => 'Dashboard',
+        'user' => [
+            'name' => 'Raghib',
+            'email' => 'raghib@gmail.com',
+        ]
+    ];
+
+    return view('contents.dashboard', $data);
+})->name('dashboard');
+
+Route::get('/users', function () {
+    $data = [
+        'title' => 'Users',
+        'user' => [
+            'name' => 'Raghib',
+            'email' => 'raghib@gmail.com',
+        ]
+    ];
+
+    return view('contents.users', $data);
+})->name('users');
+
+
+Route::get('/pages/blank-pages', function () {
+    $data = [
+        'title' => 'Blank Page',
+        'user' => [
+            'name' => 'Raghib',
+            'email' => 'raghib@gmail.com',
+        ]
+    ];
+
+    return view('contents.pages.blank', $data);
+})->name('blank-pages');
