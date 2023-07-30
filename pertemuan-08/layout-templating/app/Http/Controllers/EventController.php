@@ -10,7 +10,7 @@ class EventController extends Controller
     public function index()
     {
         $data = [
-            'title' => 'Blank Page',
+            'title' => 'Event',
             'user' => [
                 'name' => 'Raghib',
                 'email' => 'raghib@gmail.com',
