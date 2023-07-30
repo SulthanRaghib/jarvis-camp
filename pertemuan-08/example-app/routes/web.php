@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,10 +27,4 @@ Route::get('/', function () {
     return view('contents.dashboard', $data);
 })->name('dashboard');
 
-Route::get('users', function () {
-    $data = [
-        'title' => 'Users'
-    ];
-
-    return view('contents.users', $data);
-})->name('users');
+Route::get('users', [UserController::class, 'index'])->name('users');
