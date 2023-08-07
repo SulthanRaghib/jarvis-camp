@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class EventRegister extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'slug',
-        'description',
-        'start_at',
-        'end_at',
-        'catergory_id',
-        'user_id'
+        'event_id',
+        'user_id',
+        'tanggal_daftar',
     ];
 }

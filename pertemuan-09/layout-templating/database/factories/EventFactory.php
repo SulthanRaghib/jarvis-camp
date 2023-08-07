@@ -22,7 +22,8 @@ class EventFactory extends Factory
             'description' => fake()->paragraph(),
             'start_at' => fake()->dateTimeBetween('-1 month', '+1 month'),
             'end_at' => fake()->dateTimeBetween('-1 month', '+1 month'),
-            'category_id' => fake()->numberBetween(1, 5),
+            'category_id' => fake()->numberBetween(1, 3),
+            'user_id' => fake()->numberBetween(1, 10),
         ];
     }
 }
