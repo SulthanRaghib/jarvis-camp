@@ -10,10 +10,6 @@ class DashboardController extends Controller
     {
         $data = [
             'title' => 'Dashboard',
-            'user' => [
-                'name' => 'Raghib',
-                'email' => 'raghib@gmail.com',
-            ]
         ];
 
         return view('contents.dashboard', $data);
@@ -23,10 +19,6 @@ class DashboardController extends Controller
     {
         $data = [
             'title' => 'Blank Page',
-            'user' => [
-                'name' => 'Raghib',
-                'email' => 'raghib@gmail.com',
-            ]
         ];
 
         return view('contents.pages.blank', $data);

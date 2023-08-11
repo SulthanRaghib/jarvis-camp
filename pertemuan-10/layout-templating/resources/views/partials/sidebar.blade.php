@@ -6,7 +6,9 @@
          <div class="sidebar-brand-icon rotate-n-15">
              <i class="fas fa-laugh-wink"></i>
          </div>
-         <div class="sidebar-brand-text mx-3">Welcome<sup>{{ $user['name'] }}</sup></div>
+         <div class="sidebar-brand-text mx-3">Welcome<sup>Min</sup>
+             {{ Auth::user()->name }}
+         </div>
      </a>
 
      <!-- Divider -->
