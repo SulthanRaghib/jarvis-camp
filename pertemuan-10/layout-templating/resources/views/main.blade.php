@@ -20,6 +20,8 @@
     <!-- Custom styles for this template-->
     <link href={{ url('assets/css/sb-admin-2.min.css') }} rel="stylesheet">
 
+    {{-- SweetAlert2 --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 @if (!isset($isAuthPage))
 

@@ -7,7 +7,7 @@
              <i class="fas fa-laugh-wink"></i>
          </div>
          <div class="sidebar-brand-text mx-3">Welcome<sup>Min</sup>
-             {{ Auth::user()->name }}
+             {{ explode(' ', Auth::user()->name)[1] }}
          </div>
      </a>
 

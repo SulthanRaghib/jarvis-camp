@@ -324,4 +324,15 @@
         </div>
     </div>
     <!-- End of Main Content -->
+
+    {{-- add sweet alert --}}
+    @if (session()->has('failed'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: '{{ session('failed') }}',
+            })
+        </script>
+    @endif
 @endsection
